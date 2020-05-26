@@ -78,85 +78,72 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnBracket.setOnClickListener(this);
     }
 
+    private void setTvInput(String ch) {
+        process = tvInput.getText().toString();
+        tvInput.setText(process + ch);
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn0:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "0");
+                setTvInput("0");
                 break;
             case R.id.btn1:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "1");
+                setTvInput("1");
                 break;
             case R.id.btn2:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "2");
+                setTvInput("2");
                 break;
             case R.id.btn3:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "3");
+                setTvInput("3");
                 break;
             case R.id.btn4:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "4");
+                setTvInput("4");
                 break;
             case R.id.btn5:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "5");
+                setTvInput("5");
                 break;
             case R.id.btn6:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "6");
+                setTvInput("6");
                 break;
             case R.id.btn7:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "7");
+                setTvInput("7");
                 break;
             case R.id.btn8:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "8");
+                setTvInput("8");
                 break;
             case R.id.btn9:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "9");
+                setTvInput("9");
                 break;
             case R.id.btnClear:
                 tvInput.setText("");
                 tvOutput.setText("");
                 break;
             case R.id.btnPlus:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "+");
+                setTvInput("+");
                 break;
             case R.id.btnMinus:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "-");
+                setTvInput("-");
                 break;
             case R.id.btnMultiply:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "×");
+                setTvInput("×");
                 break;
             case R.id.btnDivision:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "÷");
+                setTvInput("÷");
                 break;
             case R.id.btnDot:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + ".");
+                setTvInput(".");
                 break;
             case R.id.btnPercent:
-                process = tvInput.getText().toString();
-                tvInput.setText(process + "%");
+                setTvInput("%");
                 break;
             case R.id.btnBracket:
                 if (checkBracket) {
-                    process = tvInput.getText().toString();
-                    tvInput.setText(process + ")");
+                    setTvInput(")");
                     checkBracket = false;
                 }else {
-                    process = tvInput.getText().toString();
-                    tvInput.setText(process + "(");
+                    setTvInput("(");
                     checkBracket = true;
                 }
                 break;
